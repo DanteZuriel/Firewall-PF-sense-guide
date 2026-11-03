@@ -104,4 +104,4 @@ Ahora elegiremos la opción 2 y haremos lo siguiente:
 
 ![Pasted image 20251009153948.png](../../IMAGES/Pasted%20image%2020251009153948.png)
 
-Por consiguiente veremos en la nota \[\[2 Accediendo a la interfaz web\]\] como entrar y configurar pfsense para comenzar a configurar nuestras reglas en el firewall.
+Por consiguiente veremos en la nota [2 Accediendo a la interfaz web](2%20Accediendo%20a%20la%20interfaz%20web.md) como entrar y configurar pfsense para comenzar a configurar nuestras reglas en el firewall.

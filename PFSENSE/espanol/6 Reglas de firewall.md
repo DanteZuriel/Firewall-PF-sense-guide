@@ -54,7 +54,7 @@ Antes de que comiences a aplicar reglas es importante que hagamos nuestras prueb
 
 ## WAN
 
-Podrás notar que antes de crear nuestras reglas ya tenemos 2 reglas creadas con la siguiente descripción (Block private networks) y (Block bogon networks), por defecto pfsense configura automáticamente la regla que bloquea las redes privadas pero la regla que bloquea las redes bogon se creó gracias a la configuración en la nota \[\[3 DMZ inicio, DHCP Server y reserva de IP\]\]
+Podrás notar que antes de crear nuestras reglas ya tenemos 2 reglas creadas con la siguiente descripción (Block private networks) y (Block bogon networks), por defecto pfsense configura automáticamente la regla que bloquea las redes privadas pero la regla que bloquea las redes bogon se creó gracias a la configuración en la nota [3 DMZ inicio, DHCP Server y reserva de IP](3%20DMZ%20inicio%2C%20DHCP%20Server%20y%20reserva%20de%20IP.md)
 
 Realizamos lo siguiente:
 

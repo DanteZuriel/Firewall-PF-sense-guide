@@ -18,7 +18,7 @@ En la siguiente imagen verás como clonamos la virtual machine Ubuntu
 
 Un mapeado de IP nos ayudará a que solo los clientes que agreguemos a la red puedan conectarse y los que no estén en la lista no puedan conectarse.
 
-Antes de empezar a mapear `IP` necesitamos tener una lista de las direcciones `MAC` , una vez que hayamos recopilado las direcciones, iremos a la ruta `Services --> DHCP Server --> <Elejimos interfaz en este caso LAN> --> Edit Static Mapping` Esta opción ya la habíamos visto en la nota \[\[3 DMZ inicio, DHCP Server y reserva de IP\]\] así que lo que haremos será activar la siguiente opción y al igual que como hicimos en la sección de reserva de `IP` empezaremos a colocar cada dirección que no queremos bloquear
+Antes de empezar a mapear `IP` necesitamos tener una lista de las direcciones `MAC` , una vez que hayamos recopilado las direcciones, iremos a la ruta `Services --> DHCP Server --> <Elejimos interfaz en este caso LAN> --> Edit Static Mapping` Esta opción ya la habíamos visto en la nota [3 DMZ inicio, DHCP Server y reserva de IP](3%20DMZ%20inicio%2C%20DHCP%20Server%20y%20reserva%20de%20IP.md) así que lo que haremos será activar la siguiente opción y al igual que como hicimos en la sección de reserva de `IP` empezaremos a colocar cada dirección que no queremos bloquear
 
 ![Pasted image 20251020151401.png](../../IMAGES/Pasted%20image%2020251020151401.png)
 
@@ -61,4 +61,4 @@ Después se repitió el proceso pero la IP la agregamos a nuestra lista de IP, d
 
 Nuevamente se repitió al final el proceso pero con la IP fuera del mapeado, lo que provocó el mismo error que en el primer proceso.
 
-NOTA: Esta configuración es útil en conjunto con la nota \[\[5 ARP\]\] en donde activaremos una opción para que solo las IP estáticas que hayas configurado con esta configuración tengan acceso a Internet.
+NOTA: Esta configuración es útil en conjunto con la nota [5 ARP](5%20ARP.md) en donde activaremos una opción para que solo las IP estáticas que hayas configurado con esta configuración tengan acceso a Internet.

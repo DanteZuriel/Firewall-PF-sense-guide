@@ -82,7 +82,7 @@ Ahora nos colocaremos en la siguiente ruta `Status --> DHCP Leases` Aquí podrem
 Abajo de la columna `actions` hay 2 signos \+ si le damos al que tiene el fondo de color blanco nos llevara a la ruta `Status --> DHCP Leases --> DMZ --> Edit Estatic Mapping` aquí es donde podremos configurar nuestra IP estática en el cliente que se conecto mediante la interfaz DMZ el cual se le había asignado una IP automáticamente debido a que activamos nuestro DHCP server
 
 - Nota: El rango de `DHCP pool` que asignamos a nuestra interfaz `DMZ` en este caso es de `10.10.0.10 - 10.10.0.100` así que para el rango de nuestra IP estática le asignaremos una IP de acuerdo al rango de nuestra interfaz `DMZ` que recordemos que es `10.10.0.0/24`. Así que una vez teniendo en cuenta el rango de las IP, asignaremos una IP fuera del pool (rango) del `DHCP server` en la interfaz `DMZ`  
-- Asignamos la IP estática `10.10.0.2` nuestra ip en la máquina virtual Ubuntu, se verá de la siguiente manera (recuerda también colocar el servidor de Cloudflare 1.1.1.1, el `gateway` que en este caso es 10.10.0.1, y opcional cambiar el `hostname` y la descripción). Si no recuerdas cómo asignar una IP estática consulta la nota \[\[2 Accediendo a la interfaz web\]\]
+- Asignamos la IP estática `10.10.0.2` nuestra ip en la máquina virtual Ubuntu, se verá de la siguiente manera (recuerda también colocar el servidor de Cloudflare 1.1.1.1, el `gateway` que en este caso es 10.10.0.1, y opcional cambiar el `hostname` y la descripción). Si no recuerdas cómo asignar una IP estática consulta la nota [2 Accediendo a la interfaz web](2%20Accediendo%20a%20la%20interfaz%20web.md)
 
 Como verás en la siguiente imagen la dirección de nuestra IP estática ha sido agregada.
 

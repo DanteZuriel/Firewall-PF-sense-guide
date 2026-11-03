@@ -1,4 +1,4 @@
-Para asegurar de que el firewall sea expuesto en la WAN debemos hacer una configuración en el router activando [[Modo puente en router telmex]] sin embargo si no es posible el modo puente en el router se recomienda lo siguiente para que pfsense sea el encargado de gestionar los paquetes de Internet
+Para asegurar de que el firewall sea expuesto en la WAN debemos hacer una configuración en el router activando [Modo puente en router telmex](../PFSENSE/espanol/CHEAT%20SHEETS%20Y%20TROUBLESHOOTING/Modo%20puente%20en%20router%20telmex.md) sin embargo si no es posible el modo puente en el router se recomienda lo siguiente para que pfsense sea el encargado de gestionar los paquetes de Internet
 
 # DMZ en router
 

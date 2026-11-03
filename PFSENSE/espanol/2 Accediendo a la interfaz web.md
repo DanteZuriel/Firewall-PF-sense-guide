@@ -1,4 +1,4 @@
-Ya que realizamos la configuración en la nota \[\[1 Configuración inicial\]\] lo siguiente será asignar una ip a nuestra máquina virtual donde estará conectado a la `LAN`, mostraré 2 ejemplos de cómo podemos asignarla primero empecemos con windows
+Ya que realizamos la configuración en la nota [1 Configuración inicial](1%20Configuraci%C3%B3n%20inicial.md) lo siguiente será asignar una ip a nuestra máquina virtual donde estará conectado a la `LAN`, mostraré 2 ejemplos de cómo podemos asignarla primero empecemos con windows
 
 ## Configurar IP en Windows
 

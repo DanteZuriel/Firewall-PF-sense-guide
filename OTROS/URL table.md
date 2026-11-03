@@ -19,4 +19,4 @@ el url que copiaremos sera el de tipo raw, y si todo sale bien nuestra regla que
 
 ![Pasted image 20251103152852.png](../IMAGES/Pasted%20image%2020251103152852.png)
 
-Si quieres seguir viendo el ejemplo de ring central ve a la nota [[Reglas ringcentral firewall]]
+Si quieres seguir viendo el ejemplo de ring central ve a la nota [Reglas ringcentral firewall](Reglas%20ringcentral%20firewall.md)

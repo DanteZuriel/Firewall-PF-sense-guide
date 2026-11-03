@@ -1,6 +1,6 @@
-IMPORTANTE: Asegúrate de que la IP publica este disponible en tu IPS, si no puedes preguntarle a quien te esté dando servicio de Internet e incluso pedir una IP publica, sin embargo es más seguro usar vpn o herramientas como zero tier para una conexión a otra red interna, además la siguiente nota \[\[DMZ En router telnor para evitar doble nat\]\] te podrá servir para evitar que pfsense y el router trabajen a la par lo que se llama `doble NAT`
+IMPORTANTE: Asegúrate de que la IP publica este disponible en tu IPS, si no puedes preguntarle a quien te esté dando servicio de Internet e incluso pedir una IP publica, sin embargo es más seguro usar vpn o herramientas como zero tier para una conexión a otra red interna, además la siguiente nota [DMZ En router telnor para evitar doble nat](../../OTROS/DMZ%20En%20router%20telnor%20para%20evitar%20doble%20nat.md) te podrá servir para evitar que pfsense y el router trabajen a la par lo que se llama `doble NAT`
 
-IMPORTANTE (2): Consulta las notas \[\[Modo puente en router telmex\]\] y \[\[Router telmex como AP Access Point\]\]
+IMPORTANTE (2): Consulta las notas [Modo puente en router telmex](CHEAT%20SHEETS%20Y%20TROUBLESHOOTING/Modo%20puente%20en%20router%20telmex.md) y [Router telmex como AP Access Point](CHEAT%20SHEETS%20Y%20TROUBLESHOOTING/Router%20telmex%20como%20AP%20Access%20Point.md)
 
 Network addresses translation traduce una ip pública a una ip privada en nuestra red local.
 
