@@ -1,6 +1,6 @@
 Tuve el siguiente problema con el query time al hacer un dns lookup
 
-\!\[\[Pasted image 20251226153739.png\]\]
+![Pasted image 20251226153739.png](../../../IMAGES/Pasted%20image%2020251226153739.png)
 
 Lo solucione de la siguiente manera
 
@@ -27,4 +27,4 @@ Lo solucione de la siguiente manera
 
 Después tuve los siguiente resultados
 
-\!\[\[Pasted image 20251226153928.png\]\]
+![Pasted image 20251226153928.png](../../../IMAGES/Pasted%20image%2020251226153928.png)

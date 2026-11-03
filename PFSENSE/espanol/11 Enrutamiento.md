@@ -2,7 +2,7 @@
 
 Nos dirigimos a la ruta `Diagnostics --> Routes` aquí podremos ver la siguiente información
 
-\!\[\[Pasted image 20251118152036.png\]\]
+![Pasted image 20251118152036.png](../../IMAGES/Pasted%20image%2020251118152036.png)
 
 Destination: Aquí veremos las ip y la red
 
@@ -29,7 +29,7 @@ Antes de proceder a enrutar primero colocaremos nuestra máquina pfsense, eso lo
 
 ### Servidor pfsense original
 
-- En las opciones de network habilitamos otro adaptador virtual, al igual que lo hicimos al principio para configurar el adaptador de la LAN y la DMZ, le podemos poner el nombre que queramos, por ejemplo en la imagen le pusimos el nombre de zona 2 \!\[\[Pasted image 20251119134210.png\]\]
+- En las opciones de network habilitamos otro adaptador virtual, al igual que lo hicimos al principio para configurar el adaptador de la LAN y la DMZ, le podemos poner el nombre que queramos, por ejemplo en la imagen le pusimos el nombre de zona 2 ![Pasted image 20251119134210.png](../../IMAGES/Pasted%20image%2020251119134210.png)
 
 ### Servidor pfsense clon
 
@@ -45,13 +45,13 @@ Una vez que tenemos preparados los adaptadores de red, vamos a la interfaz gráf
 
 Ya que habilitamos la interfaz creamos una regla que permita todo
 
-\!\[\[Pasted image 20251119141759.png\]\]
+![Pasted image 20251119141759.png](../../IMAGES/Pasted%20image%2020251119141759.png)
 
 ## Servidor clon
 
 Ahora configuraremos el servidor clon mediante su terminal, veremos que hay que asignar una nueva interfaz, así que le asignaremos a la interfaz em0 como WAN y a em1 como LAN sin embargo cambiaremos esta interfaz más adelante.
 
-\!\[\[Pasted image 20251119142142.png\]\]
+![Pasted image 20251119142142.png](../../IMAGES/Pasted%20image%2020251119142142.png)
 
 En esta configuración que estamos haciendo como clonamos el firewall tenemos que usar la opción 4 de la terminal para restaurar las configuraciones por defecto antes de proceder a la configuración mediante la interfaz gráfica.
 
@@ -59,7 +59,7 @@ En esta configuración que estamos haciendo como clonamos el firewall tenemos qu
 
 Entramos en la interfaz y configuramos la ip de nuestro servidor, recuerda que como se usó la opción 4 en la terminal accederemos a la interfaz con las credenciales por defecto `admin:pfsense`, una vez que entramos en este caso nos saltamos el wizard y vamos directamente a la opción `Interfaces` y asignamos una IP a la `WAN` y la `LAN` además es importante que las opciones de `Reserved Networks` estén desmarcadas ya que no es una interfaz que accede a internet
 
-\!\[\[Pasted image 20251119145116.png\]\]
+![Pasted image 20251119145116.png](../../IMAGES/Pasted%20image%2020251119145116.png)
 
 En este punto como cambiamos la IP de la LAN nos quedaremos sin internet en la maquina cliente así que asignamos un ip estática para poder volver a entrar y configurar el servidor dhcp en la ruta `Services --> DHCP` recordemos que hay que cambiar los siguientes parámetros en base a la configuración que estamos realizando en este ejemplo
 
@@ -75,29 +75,29 @@ Con esto ya tenemos listo la preparación para el enrutamiento
 
 Primeramente debemos entender que el enrutamiento consistirá en la comunicación de una máquina host del firewall original a una máquina host de la máquina clon, la opción que nos ayudara a esto en la interfaz gráfica se encuentra en la ruta `System --> Routing --> Gateways --> Edit` aqui asignamos una dirección disponible en este caso elegimos la direccion `10.0.3.15` dentro de la interfaz grafica del firewall original
 
-\!\[\[Pasted image 20251122132940.png\]\]
+![Pasted image 20251122132940.png](../../IMAGES/Pasted%20image%2020251122132940.png)
 
 si tienes problemas para colocar el gateway revisa la interfaz del firewall clone, así como se muestra la siguiente imagen la cual muestra las interfaces disponibles en el firewall original
 
-\!\[\[Pasted image 20251119160502.png\]\]
+![Pasted image 20251119160502.png](../../IMAGES/Pasted%20image%2020251119160502.png)
 
 Ya que tenemos el gateway, nos movemos a `System --> Routing --> Static routes` aquí colocaremos la red a la que queremos conectarnos, así que seleccionamos la red de la `LAN 2` y nuestra regla quedaría de la siguiente manera
 
-\!\[\[Pasted image 20251122133517.png\]\]
+![Pasted image 20251122133517.png](../../IMAGES/Pasted%20image%2020251122133517.png)
 
 - Ahora crearemos la regla en nuestro firewall original para que tenga acceso la `LAN 2` la regla consistirá que el tráfico pueda pasar de las redes internas del firewall principal a las redes internas del firewall clon, asi que nuestra regla queda de la siguiente manera
 
-\!\[\[Pasted image 20251122133149.png\]\]
+![Pasted image 20251122133149.png](../../IMAGES/Pasted%20image%2020251122133149.png)
 
 # Asignando redes en firewall clon
 
 Ahora realizaremos el mismo proceso añadimos la ruta `gateway` la ip de nuestro gateway de zona 2 o sea el firewall clon, además este gateway que creamos lo colocamos por defecto así como se ver en la parte de abajo de la imagen
 
-\!\[\[Pasted image 20251122133647.png\]\]
+![Pasted image 20251122133647.png](../../IMAGES/Pasted%20image%2020251122133647.png)
 
 Nuestra regla estática va a apunta a la red del firewall principal
 
-\!\[\[Pasted image 20251122133738.png\]\]
+![Pasted image 20251122133738.png](../../IMAGES/Pasted%20image%2020251122133738.png)
 
 estas configuraciones las podemos comprobar en `Diagnostics --> Routes` , como configuración de seguridad podemos desactivar la `NAT` del firewall clon en la ruta `Firewall --> NAT --> Outbound`
 

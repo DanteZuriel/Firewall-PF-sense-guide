@@ -16,17 +16,17 @@ turn.ringcentral.com
 
 copiamos el url en formato raw y pegamos la url en un alias con tipo url table, lo dejaremos en una frecuencia de 1 para que sea revisado cada día
 
-![[Pasted image 20251103152852.png]]
+![Pasted image 20251103152852.png](../IMAGES/Pasted%20image%2020251103152852.png)
 
 Ahora realizamos otros 2 aliases para los puertos TCP en los puertos 80, 443, 5060, 5061, 5090, 5091, 5096, 5097, 636 y UDP en los puertos 123, 3478-3479, 5060-5091, 16384-16482, 20000-39999, 40000-49999, 50000-59999, 60000-64999
 
 - Es importante que el rango de puertos en pfsense se separan por dos puntos `:` y los colocaremos tal como se muestra la imagen
 
-![[Pasted image 20251104154619.png]]
+![Pasted image 20251104154619.png](../IMAGES/Pasted%20image%2020251104154619.png)
 
 La siguiente imagen muestra como quedarían nuestras reglas
 
-![[Pasted image 20251104154718.png]]
+![Pasted image 20251104154718.png](../IMAGES/Pasted%20image%2020251104154718.png)
 
 Ahora solo queda asignar estos alias a las reglas flotantes.
 # Configuración de reglas flotantes

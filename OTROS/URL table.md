@@ -17,6 +17,6 @@ turn.ringcentral.com
 
 el url que copiaremos sera el de tipo raw, y si todo sale bien nuestra regla quedara de la siguiente manera
 
-![[Pasted image 20251103152852.png]]
+![Pasted image 20251103152852.png](../IMAGES/Pasted%20image%2020251103152852.png)
 
 Si quieres seguir viendo el ejemplo de ring central ve a la nota [[Reglas ringcentral firewall]]

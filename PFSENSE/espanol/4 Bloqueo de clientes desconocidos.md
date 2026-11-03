@@ -12,7 +12,7 @@ Como sabemos tenemos habilitado el dhcp server en ambas interfaces en el rango q
 
 En la siguiente imagen verás como clonamos la virtual machine Ubuntu
 
-\!\[\[VirtualBox\_clone\_virtual\_machine.png\]\]
+![VirtualBox_clone_virtual_machine.png](../../IMAGES/VirtualBox_clone_virtual_machine.png)
 
 # Mapeo de IP
 
@@ -20,13 +20,13 @@ Un mapeado de IP nos ayudará a que solo los clientes que agreguemos a la red pu
 
 Antes de empezar a mapear `IP` necesitamos tener una lista de las direcciones `MAC` , una vez que hayamos recopilado las direcciones, iremos a la ruta `Services --> DHCP Server --> <Elejimos interfaz en este caso LAN> --> Edit Static Mapping` Esta opción ya la habíamos visto en la nota \[\[3 DMZ inicio, DHCP Server y reserva de IP\]\] así que lo que haremos será activar la siguiente opción y al igual que como hicimos en la sección de reserva de `IP` empezaremos a colocar cada dirección que no queremos bloquear
 
-\!\[\[Pasted image 20251020151401.png\]\]
+![Pasted image 20251020151401.png](../../IMAGES/Pasted%20image%2020251020151401.png)
 
 Como vemos, activamos la opción de `deny Unknown Clients` elegimos la opción que solo permite el acceso a la red de cualquier interfaz
 
 Después para configurar las `IP` que queremos que no sean bloqueadas, en la misma pestaña nos dirigiremos hacia abajo de esa pagina y le daremos clic en el recuadro verde en el cual podremos configurar las IP que no queremos que sean bloqueadas
 
-\!\[\[Pasted image 20251020151931.png\]\]
+![Pasted image 20251020151931.png](../../IMAGES/Pasted%20image%2020251020151931.png)
 
 # Prueba 1, Windows
 
@@ -48,7 +48,7 @@ Esto retirara la IP que teníamos antes y volverá a pedir al DHCP server una nu
 
 La siguiente prueba fue hecha con nuestra máquina que clonamos
 
-\!\[\[VirtualBoxVM\_pfsense\_dhcp\_connection\_test\_static\_ip.png\]\]
+![VirtualBoxVM_pfsense_dhcp_connection_test_static_ip.png](../../IMAGES/VirtualBoxVM_pfsense_dhcp_connection_test_static_ip.png)
 
 A continuación se explicará qué es lo que sucede:
 

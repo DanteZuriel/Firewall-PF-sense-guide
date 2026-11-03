@@ -50,7 +50,7 @@ Antes de usar los diferentes tipos de NAT primero cambiaremos la dirección de l
 
 Nos dirigimos primero a la ruta `Interfaces --> WAN` Aquí primero cambiaremos al tipo de ipv4 a Static IPv4 lo cual una vez seleccionada tendremos la siguiente opción disponible
 
-\!\[\[Pasted image 20251105123545.png\]\]
+![Pasted image 20251105123545.png](../../IMAGES/Pasted%20image%2020251105123545.png)
 
 Como vemos ahora estaremos usando una IP pública en la interfaz `WAN`
 
@@ -60,7 +60,7 @@ Ahora si nos dirigimos a la ruta `Firewall --> Virtual IPs`  al añadir una ip v
 
 podremos ver primero estas 4 opciones que se muestran en la imagen
 
-\!\[\[Pasted image 20251105124712.png\]\]
+![Pasted image 20251105124712.png](../../IMAGES/Pasted%20image%2020251105124712.png)
 
 Nosotros usaremos `IP Alias` ya que nuestro proveedor de Internet está usando como gateway la ip publica que configuramos por otro lado si estuviéramos usando una IP que no es pública seleccionaremos `other`
 
@@ -68,7 +68,7 @@ Nosotros usaremos `IP Alias` ya que nuestro proveedor de Internet está usando c
 
 El mapeo de estas redes virtuales será igual al que hicimos al mapear las redes privadas, ten en cuenta que serán los disponibles en el rango que asignaste a la IP en este caso solo tenemos 8 disponibles, la siguiente imagen muestra cómo las configuramos
 
-\!\[\[Pasted image 20251105142837.png\]\]
+![Pasted image 20251105142837.png](../../IMAGES/Pasted%20image%2020251105142837.png)
 
 # Source NAT
 
@@ -76,7 +76,7 @@ El mapeo de estas redes virtuales será igual al que hicimos al mapear las redes
 
 Ahora nos ubicamos en la ruta `Firewall --> NAT --> Outbound` aquí veremos 4 modos para la aplicación de las reglas
 
-\!\[\[Pasted image 20251105143222.png\]\]
+![Pasted image 20251105143222.png](../../IMAGES/Pasted%20image%2020251105143222.png)
 
 A continuación se explicaran los modos de izquierda a derecha
 

@@ -10,7 +10,7 @@ Normalmente en el 90% de los casos no es necesario tener reglas flotantes, una r
 
 Antes de empezar a configurar reglas primero tenemos que tener claro qué es lo que queremos hacer por ejemplo si queremos que la WAN se conecte a Internet o que la conexión entre la interfaz LAN y la DMZ sea bloqueada, la siguiente lista es un ejemplo de planificación, más adelante en la interfaz gráfica de pfsense configuraremos algunas reglas
 
-\!\[\[Pasted image 20251022155108.png\]\] Observa que en las reglas que planificamos de la `LAN` las reglas que especifica el tráfico de los puertos `80 y 443` están por encima de la regla que bloquea el tráfico entre la LAN y la DMZ es por ello que si estas 2 reglas cambiaran de lugar primero bloquearía todo el tráfico de la LAN a la DMZ y después al querer aplicar la regla que permite la entrada de paquetes de la LAN a la DMZ mediante los puertos `80 y 443` la regla no podría aplicarse porque ya habíamos bloqueado todo el tráfico entre la LAN y la DMZ, es por ello que el orden en las reglas importa.
+![Pasted image 20251022155108.png](../../IMAGES/Pasted%20image%2020251022155108.png) Observa que en las reglas que planificamos de la `LAN` las reglas que especifica el tráfico de los puertos `80 y 443` están por encima de la regla que bloquea el tráfico entre la LAN y la DMZ es por ello que si estas 2 reglas cambiaran de lugar primero bloquearía todo el tráfico de la LAN a la DMZ y después al querer aplicar la regla que permite la entrada de paquetes de la LAN a la DMZ mediante los puertos `80 y 443` la regla no podría aplicarse porque ya habíamos bloqueado todo el tráfico entre la LAN y la DMZ, es por ello que el orden en las reglas importa.
 
 # Comenzando a configurar reglas
 
@@ -26,7 +26,7 @@ Nos situaremos en la ruta `Firewall --> Rules` Aquí es donde configuraremos nue
 
 La fuente será el origen del paquete o en otras palabras quien mandara el paquete, ahora como podemos ver en la siguiente imagen hay varias opciones donde podremos elegir cuál será el origen
 
-\!\[\[Pasted image 20251023144729.png\]\]
+![Pasted image 20251023144729.png](../../IMAGES/Pasted%20image%2020251023144729.png)
 
 - `Any` Se refiere a cualquier dirección ip  
 - `Address or Alias` Especificamos alguna ip  
@@ -34,7 +34,7 @@ La fuente será el origen del paquete o en otras palabras quien mandara el paque
 - `address` Podemos ver que las interfaces que ya configuramos aparecen con address eso se refiere a la ip de la interfaz  
 - `subnets` Se refiere al rango total de esa interfaz, como estamos usando el switch virtual de virtualbox aparece como `DMZ subnet` pero si lo tuviéramos conectados a algún switch físico cambiaría su nombre a `DMZ net`
 
-\!\[\[Pasted image 20251023155012.png\]\]
+![Pasted image 20251023155012.png](../../IMAGES/Pasted%20image%2020251023155012.png)
 
 Como vemos en la imagen de arriba configuramos una regla para denegar el acceso a Internet de `DMZ --> LAN` y otra para permitir el acceso a Internet, la descripción que habíamos colocado al crear la regla te dirá que es lo que realizará
 
@@ -42,7 +42,7 @@ Como vemos en la imagen de arriba configuramos una regla para denegar el acceso 
 
 Ahora configuraremos reglas específicas en la `LAN` nos guiaremos en base a lo que menciona el subtitulo `PLANIFICACION`.
 
-\!\[\[Pasted image 20251023161317.png\]\]
+![Pasted image 20251023161317.png](../../IMAGES/Pasted%20image%2020251023161317.png)
 
 Como podrás observar especificamos el puerto 22 para conexión remota mediante SSH como no aparece el puerto en el listado utilizamos la opción `other` y especificamos el número de puerto la ip de source es nuestra ip en la máquina ubuntu conectada a la interfaz `LAN` a la máquina parrot conectada a la interfaz `DMZ` si nosotros hacemos pruebas mediante SSH podremos ver que negara el acceso a SSH en dispositivos que no tiene autorizado el uso del puerto
 
@@ -60,7 +60,7 @@ Realizamos lo siguiente:
 
 1. Primera y segunda regla ya están colocadas por defecto de acuerdo a la configuración de esta guía.  
 2. Tercera y cuarta regla: Creamos 2 reglas para permitir el tráfico `HTTP` y `HTTPS` de la `WAN` a `DMZ`, de esta manera, la máquina que funcionara como `DMZ` tendrá acceso a Internet, sin embargo también debemos crear una interfaz en el DMZ para que permita el tráfico hacia la WAN  
-3. En la última regla bloqueamos todo el tráfico hacia la `WAN`. \!\[\[Pasted image 20251027155224.png\]\]
+3. En la última regla bloqueamos todo el tráfico hacia la `WAN`. ![Pasted image 20251027155224.png](../../IMAGES/Pasted%20image%2020251027155224.png)
 
 ## LAN
 
@@ -68,13 +68,13 @@ Realizamos lo siguiente:
 2. Segunda regla: Permitimos `ICMP` hacia cualquier dirección.  
 3. Tercera regla: Permitimos `HTTPS` de `192.168.2.2` hacia `DMZ`  
 4. Cuarta regla: Permitimos `SSH` de `192.168.2.2` hacia `DMZ`  
-5. Las últimas 2 reglas ya están colocadas por defecto de acuerdo con la configuración de esta guía. \!\[\[Pasted image 20251027155507.png\]\]
+5. Las últimas 2 reglas ya están colocadas por defecto de acuerdo con la configuración de esta guía. ![Pasted image 20251027155507.png](../../IMAGES/Pasted%20image%2020251027155507.png)
 
 ## DMZ
 
 1. La primera regla ya está puesta por defecto de acuerdo a la configuración de esta guía.  
 2. Segunda regla: permitimos el acceso a Internet de las subredes de `DMZ` hacia cualquier dirección.  
-3. Tercera regla: Rechazamos los paquetes de las subredes de `DMZ` hacia las subredes de la `LAN` \!\[\[Pasted image 20251027155309.png\]\]
+3. Tercera regla: Rechazamos los paquetes de las subredes de `DMZ` hacia las subredes de la `LAN` ![Pasted image 20251027155309.png](../../IMAGES/Pasted%20image%2020251027155309.png)
 
 Como podrás notar en las reglas de la `LAN` agregamos una regla para `ICMP` de `LAN` \--\> `WEB SERVER` esto es debido a que si esta regla no está presente e intentamos hacer un `ping` al webserver, la terminal no nos mostrará los mensajes del comando `ping`
 
@@ -99,4 +99,4 @@ Como podrás notar en las reglas de la `LAN` agregamos una regla para `ICMP` de 
 
 En la ruta `Firewall --> Schedules --> Edit` podemos configurar un rango de días y horas en los que queremos que la regla este activa, la imagen de abajo mostrará un ejemplo para configurar una jornada de trabajo regular
 
-\!\[\[Pasted image 20251028144056.png\]\]
+![Pasted image 20251028144056.png](../../IMAGES/Pasted%20image%2020251028144056.png)

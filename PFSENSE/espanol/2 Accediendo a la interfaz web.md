@@ -6,7 +6,7 @@ Ya que realizamos la configuración en la nota \[\[1 Configuración inicial\]\] 
 2. Da click derecho en tu adaptador de internet \--\> selecciona propiedades \--\> Ahora busca IPv4 \--\> da click en propiedades  
 3. Ahora en este panel colocaremos una ip de acuerdo al rango que hayamos puesto en nuestro adaptador de la LAN y el default gateway será el la ip del adaptador de la LAN
 
-\!\[\[Pasted image 20251009160438.png\]\]
+![Pasted image 20251009160438.png](../../IMAGES/Pasted%20image%2020251009160438.png)
 
 ## Configurar IP en Linux
 
@@ -22,16 +22,16 @@ Ahora podemos acceder a la interfaz gráfica de pfsense donde podremos realizar 
 - Después entraremos en `System --> setup wizard`. Para realizar la configuración inicial  
 - Primero colocamos los datos de host, dominio y dns, como se muestra en la imagen.
 
-\!\[\[Pasted image 20251011112414.png\]\]
+![Pasted image 20251011112414.png](../../IMAGES/Pasted%20image%2020251011112414.png)
 
 - Los siguientes pasos hasta `configure WAN interface` los dejamos por defecto a excepción del cambio de la zona horaria, la imagen de abajo podremos ver en qué paso nos situamos
 
-\!\[\[Pasted image 20251011112937.png\]\]
+![Pasted image 20251011112937.png](../../IMAGES/Pasted%20image%2020251011112937.png)
 
 - Sin embargo es importante que revises que la opción de RFC1918 esté activado ya que esto bloqueará el rango de las `IP` que establece la `RFC1918`  
 - `Block Bogon Networks` aquí se definen todas las redes que no son utilizadas por dispositivos como redes de prueba o no utilizadas, así que si viene tráfico al `firewall` por una de estas redes la va a bloquear
 
-\!\[\[Pasted image 20251011113101.png\]\]
+![Pasted image 20251011113101.png](../../IMAGES/Pasted%20image%2020251011113101.png)
 
 - De aquí en adelante en los siguientes pasos solo damos en `next` y solo se configuró la asignación de password y recargamos la página para aplicar cambios.
 

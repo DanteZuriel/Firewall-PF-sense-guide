@@ -15,6 +15,6 @@
 
 Una vez que sabemos las diferencias empezaremos probando por bloquear el `ICMP` en todas las direcciones, la siguiente imagen muestra como la configuramos
 
-\!\[\[Pasted image 20251028155438.png\]\]
+![Pasted image 20251028155438.png](../../IMAGES/Pasted%20image%2020251028155438.png)
 
 al usar ping 8.8.8.8 no lo podremos hacer debido a esta regla, sin embargo si recordamos habíamos configurado una regla en la LAN en la que dejamos pasar el tráfico por ICMP en esa dirección ip
